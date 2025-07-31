@@ -99,12 +99,6 @@ body {
   animation: infinite 1.5s jump-shaking;
 }
 
-#channelCom {
-  background-image: url(../public/image/TalBanner.jpg);
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
 
 .gradientdiv {
   background: #469F45;
