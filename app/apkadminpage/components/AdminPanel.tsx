@@ -1,5 +1,5 @@
 "use client"
-import Image from 'next/image'
+import Image, { StaticImageData } from 'next/image'
 import React, { useState } from 'react'
 import pa from '@/public/image/paypal.png'
 import defaultImage from '@/public/image/default-image.jpg'
@@ -9,7 +9,7 @@ import { BiPencil, BiTrashAlt } from 'react-icons/bi';
 
 function AdminPanel() {
 
-    const [image, setImage] = useState<any>(defaultImage)
+    const [image, setImage] = useState<StaticImageData | string>(defaultImage)
 
     const [appData, setAppData] = useState({
         image: image,
@@ -65,6 +65,7 @@ function AdminPanel() {
             })
             setStatus('success')
         } catch (err) {
+            console.log(err);
             setStatus('error')
         }
         console.log('submited');
@@ -72,10 +73,10 @@ function AdminPanel() {
 
 
 
-    const onChangeImage = (event: any) => {
+    const onChangeImage = (event: React.ChangeEvent<HTMLInputElement>) => {
         if (event.target.files && event.target.files[0]) {
-            // setImage(URL.createObjectURL(event.target.files[0]));
             const imageURL = URL.createObjectURL(event.target.files[0])
+            setImage(imageURL)
             setAppData(prev => ({ ...prev, image: imageURL }))
         }
     }
