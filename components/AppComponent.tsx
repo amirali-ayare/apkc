@@ -79,6 +79,33 @@ function AppComponent() {
         },
     ]
 
+    const appMobile = [
+        {
+            name: 'paypal',
+            img: paypal
+        },
+        {
+            name: 'paypal',
+            img: paypal
+        },
+        {
+            name: 'paypal',
+            img: paypal
+        },
+        {
+            name: 'paypal',
+            img: paypal
+        },
+        {
+            name: 'paypal',
+            img: paypal
+        },
+        {
+            name: 'paypal',
+            img: paypal
+        }
+    ]
+
 
     // const [apps, setApps] = useState<IApp[]>([])
     // const [mobileApps, setMobileApps] = useState<IApp[]>([])
@@ -148,7 +175,7 @@ function AppComponent() {
                     })
                 }
                 {
-                    appsEx.map((item, index) => {
+                    appMobile.map((item, index) => {
                         return (
                             <Link href={`/apps/1`} key={index} className='inline md:hidden'>
                                 <div>

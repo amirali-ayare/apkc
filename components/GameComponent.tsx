@@ -68,6 +68,33 @@ function GameComponent() {
         },
     ]
 
+    const mobileApp = [
+        {
+            name: 'inshot',
+            img: inshot
+        },
+        {
+            name: 'inshot',
+            img: inshot
+        },
+        {
+            name: 'inshot',
+            img: inshot
+        },
+        {
+            name: 'inshot',
+            img: inshot
+        },
+        {
+            name: 'inshot',
+            img: inshot
+        },
+        {
+            name: 'inshot',
+            img: inshot
+        }
+    ]
+
     // const [games, setGames] = useState<IApp[]>([])
     // const [mobileGames, setMobileGames] = useState<IApp[]>([])
 
@@ -135,7 +162,7 @@ function GameComponent() {
                     })
                 }
                 {
-                    appsEx.map((item, index) => {
+                    mobileApp.map((item, index) => {
                         return (
                             <Link href={`/game/1`} key={index} className='inline md:hidden'>
                                 <div>
